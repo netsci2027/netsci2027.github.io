@@ -44,14 +44,15 @@ export default function Hero({ image }: Props) {
         <div className="relative h-full flex flex-col items-center justify-center px-6 text-center pt-16">
           <div className="max-w-5xl mx-auto animate-fade-up">
             <h1
-              className="font-display text-7xl md:text-8xl lg:text-9xl font-extrabold text-white leading-[1] tracking-tight"
+              className="font-sans text-7xl md:text-8xl lg:text-9xl font-light leading-[1] tracking-tight"
               style={{ textShadow: '0 4px 18px rgba(0,0,0,0.55)' }}
             >
-              {t('hero.eventLabel')}
+              <span className="text-white">NetSci</span>{' '}
+              <span style={{ color: '#D1232A' }}>2027</span>
             </h1>
 
             <p
-              className="mt-6 font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-[1.2]"
+              className="mt-6 font-sans text-3xl md:text-4xl lg:text-5xl font-light text-white leading-[1.15]"
               style={{ textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}
             >
               {t('hero.title').split('|').map((line, i, arr) => (

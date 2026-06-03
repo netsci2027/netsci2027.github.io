@@ -28,7 +28,7 @@ export const ui = {
     'nav.menu.open': 'Open menu',
 
     // Use `|` to mark line breaks (the Hero renders one <br/> per pipe).
-    'hero.title': 'International School and|Conference on Network|Science',
+    'hero.title': 'International School & Conference|on Network Science',
     'hero.dates': 'May 17 — 21, 2027, Dresden, Germany',
     'hero.cta': 'More Information soon',
     'hero.eventLabel': 'NetSci 2027',
