@@ -42,16 +42,16 @@ export default function Hero({ image }: Props) {
 
         {/* Content */}
         <div className="relative h-full flex flex-col items-center justify-center px-6 text-center pt-16">
-          <div className="max-w-4xl mx-auto animate-fade-up">
-            <h1
-              className="font-display text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-white leading-[1.05] tracking-tight"
-              style={{ textShadow: '0 4px 18px rgba(0,0,0,0.55)' }}
+          <div className="max-w-3xl mx-auto animate-fade-up">
+            <div
+              className="font-display text-tu-gold text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide mb-4"
+              style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
             >
               {t('hero.eventLabel')}
-            </h1>
+            </div>
 
-            <p
-              className="mt-6 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.15]"
+            <h1
+              className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1]"
               style={{ textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}
             >
               {t('hero.title').split('|').map((line, i, arr) => (
@@ -60,7 +60,7 @@ export default function Hero({ image }: Props) {
                   {i < arr.length - 1 && <br />}
                 </span>
               ))}
-            </p>
+            </h1>
 
             <p
               className="mt-5 text-white text-lg md:text-xl font-medium tracking-wide"
