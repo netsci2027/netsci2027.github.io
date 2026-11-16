@@ -1,6 +1,10 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import Prose from '../../components/ui/Prose.tsx';
+import { u } from '../../lib/url';
+
+const fig = 'w-full rounded-xl object-cover';
+const cap = 'mt-2 text-xs text-[#66668F]';
 // City introduction based on the "Dresden Kurzporträt" press text by Dresden Marketing GmbH.
 ---
 
@@ -9,6 +13,11 @@ import Prose from '../../components/ui/Prose.tsx';
   lede="Baroque skyline, world-class culture and research, and a compact, green city on the Elbe."
   crumbs={[{ label: 'Home', href: '/' }, { label: 'Venue & Travel' }, { label: 'Local Information' }]}
 >
+  <figure class="mb-10">
+    <img src={u('/dresden/elbe-skyline.jpg')} alt="Dresden's old town skyline seen across the Elbe" class={`${fig} aspect-[12/5]`} />
+    <figcaption class={cap}>The old town skyline across the Elbe, with the Augustus Bridge.</figcaption>
+  </figure>
+
   <Prose>
     <h2>Culture and history</h2>
     <p>
@@ -19,6 +28,11 @@ import Prose from '../../components/ui/Prose.tsx';
       city's cultural life, alongside festivals such as the Dresden Music Festival, the Dixieland Festival
       and the Jazztage.
     </p>
+
+    <figure>
+      <img src={u('/dresden/altstadt-night.jpg')} alt="The Hofkirche and old town lit up at dusk above the Elbe" class={fig} loading="lazy" />
+      <figcaption class={cap}>The old town at dusk.</figcaption>
+    </figure>
 
     <h2>Science and innovation</h2>
     <p>
@@ -37,6 +51,17 @@ import Prose from '../../components/ui/Prose.tsx';
       even within the city limits.
     </p>
 
+    <div class="grid sm:grid-cols-2 gap-4 not-prose">
+      <figure>
+        <img src={u('/dresden/kunsthofpassage.jpg')} alt="Blue facade with musical drainpipes in the Kunsthofpassage" class={fig} loading="lazy" />
+        <figcaption class={cap}>Kunsthofpassage in the Neustadt.</figcaption>
+      </figure>
+      <figure>
+        <img src={u('/dresden/grosser-garten.jpg')} alt="Baroque palace in the Großer Garten park" class={fig} loading="lazy" />
+        <figcaption class={cap}>Palace in the Großer Garten.</figcaption>
+      </figure>
+    </div>
+
     <h2>Compact and well connected</h2>
     <p>
       Dresden is compact: famous sights are within walking distance of each other, and the airport is
@@ -51,6 +76,15 @@ import Prose from '../../components/ui/Prose.tsx';
       <a href="https://www.visit-dresden-elbland.de/" target="_blank" rel="noopener">visit-dresden-elbland.de</a>
       and <a href="https://www.dresden-convention.com/" target="_blank" rel="noopener">dresden-convention.com</a>.
       The exact conference venue will be announced soon.
+    </p>
+
+    <p class="text-xs text-[#66668F]">
+      Photos via Wikimedia Commons:
+      skyline by <a href="https://commons.wikimedia.org/wiki/File:Dresden-canalettoblick-gp.jpg" target="_blank" rel="noopener">Kolossos</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>;
+      old town at dusk by <a href="https://commons.wikimedia.org/wiki/File:Dresden_Altstadt_by_night_01.JPG" target="_blank" rel="noopener">Ad Meskens</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+      Kunsthofpassage by <a href="https://commons.wikimedia.org/wiki/File:Dresden_-_Kunsthofpassage_Hof_der_Elemente.jpg" target="_blank" rel="noopener">Fred Romero</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>;
+      Großer Garten by <a href="https://commons.wikimedia.org/wiki/File:Dresden-Palais-Grosser-Gart.jpg" target="_blank" rel="noopener">Kolossos</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>.
+      All cropped and resized.
     </p>
   </Prose>
 </PageLayout>
