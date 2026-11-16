@@ -23,6 +23,7 @@ export const ui = {
     'nav.venue.hotels': 'Accommodations',
     'nav.venue.visa': 'Visa Information',
     'nav.venue.travel': 'Getting to Dresden',
+    'nav.venue.grants': 'Travel Grants',
     'nav.venue.local': 'Local Information',
     'nav.partners': 'Partners & Sponsors',
     'nav.contact': 'Contact',

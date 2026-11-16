@@ -50,6 +50,7 @@ export const navItems: NavItem[] = [
       { key: 'nav.venue.hotels', href: '/venue/accommodations' },
       { key: 'nav.venue.visa', href: '/venue/visa' },
       { key: 'nav.venue.travel', href: '/venue/travel' },
+      { key: 'nav.venue.grants', href: '/venue/grants' },
       { key: 'nav.venue.local', href: '/venue/local' },
     ],
   },

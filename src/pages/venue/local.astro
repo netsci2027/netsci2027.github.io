@@ -1,13 +1,56 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import ComingSoon from '../../components/ui/ComingSoon.astro';
+import Prose from '../../components/ui/Prose.tsx';
+// City introduction based on the "Dresden Kurzporträt" press text by Dresden Marketing GmbH.
 ---
 
-<PageLayout title="Local Information" crumbs={[{ label: 'Home', href: '/' }, { label: 'Venue & Travel' }, { label: 'Local Information' }]}>
-  <ComingSoon note="Tips for your stay in Dresden will follow.">
-    <p class="mt-3 text-[#171717]">
-      In the meantime, Dresden's convention bureau has visitor information:
-      <a href="https://www.dresden-convention.com/" target="_blank" rel="noopener" class="underline text-[#00008C]">dresden-convention.com</a>.
+<PageLayout
+  title="About Dresden"
+  lede="Baroque skyline, world-class culture and research, and a compact, green city on the Elbe."
+  crumbs={[{ label: 'Home', href: '/' }, { label: 'Venue & Travel' }, { label: 'Local Information' }]}
+>
+  <Prose>
+    <h2>Culture and history</h2>
+    <p>
+      Dresden enchants visitors with Baroque elegance and lively culture. With the Frauenkirche, the Zwinger
+      and the Semperoper, it is one of Germany's most popular destinations, welcoming millions of guests
+      every year, around 20 percent of them from abroad. More than 50 museums, including the Dresden State
+      Art Collections (Staatliche Kunstsammlungen) with 14 museums, and more than 30 theatre stages shape the
+      city's cultural life, alongside festivals such as the Dresden Music Festival, the Dixieland Festival
+      and the Jazztage.
     </p>
-  </ComingSoon>
+
+    <h2>Science and innovation</h2>
+    <p>
+      Dresden stands for excellent research and innovation. TU Dresden has been one of Germany's
+      Universities of Excellence since 2012, and the city is a leader in microelectronics, information and
+      communication technology, nanotechnology, materials science and the life sciences, with research
+      institutes and international companies working closely together.
+    </p>
+
+    <h2>Life in the city</h2>
+    <p>
+      Hardly a weekend passes without an event: open-air film nights on the banks of the Elbe, museum and
+      theatre nights, and city festivals. The Äußere Neustadt is a lively district full of bars, cafés,
+      restaurants, clubs and small theatres. Dresden is also one of Europe's greenest cities, with the Großer
+      Garten, the Elbe meadows, the Dresdner Heide forest and vineyards on the slopes of the Elbe valley,
+      even within the city limits.
+    </p>
+
+    <h2>Compact and well connected</h2>
+    <p>
+      Dresden is compact: famous sights are within walking distance of each other, and the airport is
+      20 minutes away by public transport. The surroundings are close too: Meissen and its porcelain
+      manufactory are 30 minutes away, and the sandstone landscapes of Saxon Switzerland less than
+      40 minutes. Berlin and Prague are each about two hours away. Dresden, the capital of Saxony, has
+      around 574,000 inhabitants.
+    </p>
+
+    <p class="text-sm text-[#66668F]">
+      More visitor information:
+      <a href="https://www.visit-dresden-elbland.de/" target="_blank" rel="noopener">visit-dresden-elbland.de</a>
+      and <a href="https://www.dresden-convention.com/" target="_blank" rel="noopener">dresden-convention.com</a>.
+      The exact conference venue will be announced soon.
+    </p>
+  </Prose>
 </PageLayout>

@@ -1,0 +1,47 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Prose from '../../components/ui/Prose.tsx';
+
+const FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSdreycnczYA0lcK7bl2hPLqNzIbnKFOuH2fbByUOM8I5mac8w/viewform';
+const WB = 'https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups';
+---
+
+<PageLayout
+  title="Open Arms Travel Grants"
+  lede="Support for researchers from low- and middle-income countries to attend NetSci 2027 in Dresden."
+  crumbs={[{ label: 'Home', href: '/' }, { label: 'Venue & Travel' }, { label: 'Travel Grants' }]}
+>
+  <Prose>
+    <p>
+      We are pleased to announce a limited number of travel grants to attend the conference. The goal is
+      to support people from low- and middle-income countries who need financial support for travel and
+      conference costs to attend.
+    </p>
+    <p>
+      We will award basic grants to support registration fees and accommodation costs, and a limited
+      number of extended grants that also cover economy travel costs.
+    </p>
+    <p>
+      Grants will only be awarded to people who present their research during the conference. Applicants
+      must reside in one of the
+      <a href={WB} target="_blank" rel="noopener">low- or lower-middle-income and upper-middle-income economies (defined by the World Bank)</a>.
+    </p>
+
+    <h2>Application process</h2>
+    <p>
+      Applicants must submit a motivation letter (250-word limit) disclosing their affiliation(s), career
+      stage, publications (if any), and the title and submission number.
+    </p>
+    <p>
+      <a href={FORM} target="_blank" rel="noopener"><strong>Submit your application here</strong></a>.
+    </p>
+    <p><strong>Deadline: 31 January 2027</strong></p>
+
+    <h2>Selection process</h2>
+    <ul>
+      <li>Applicants will be notified via email of the decision by 20 February 2027.</li>
+      <li>The number of grants will depend on the number of applicants.</li>
+      <li>Applicants who are awarded a grant are required to attend the conference in person.</li>
+    </ul>
+  </Prose>
+</PageLayout>

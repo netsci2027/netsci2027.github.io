@@ -1,8 +1,13 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import ComingSoon from '../../components/ui/ComingSoon.astro';
+import { u } from '../../lib/url';
 ---
 
 <PageLayout title="Conference Awards" crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }, { label: 'Conference Awards' }]}>
   <ComingSoon note="Details on the NetSci 2027 awards will be announced here." />
+  <p class="mt-8 text-[#171717]">
+    Looking for travel support? See the
+    <a href={u('/venue/grants')} class="underline text-[#00008C]">Open Arms travel grants</a>.
+  </p>
 </PageLayout>
