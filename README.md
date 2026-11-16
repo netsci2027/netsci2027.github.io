@@ -73,26 +73,13 @@ src/
 | Hero / Dresden photo | replace `src/assets/tu-dresden.jpeg` |
 | Site URL (sitemap, canonical, schema) | `astro.config.mjs` → `site` |
 
-### Public site vs. dev preview
+### Deployment
 
-The same code builds two sites (see `.github/workflows/deploy.yml`):
-
-| Repo | URL | What it shows |
-|---|---|---|
-| `netsci2027/netsci2027.github.io` | https://netsci2027.github.io | Public site: full site with menu |
-| `loplopez/conf-dev` (or any other copy) | https://loplopez.github.io/conf-dev | Dev preview: full site with menu, for sharing with the team |
-
-Any repository other than `netsci2027/netsci2027.github.io` builds the full site under `/<repo-name>`;
-the workflow sets `SITE_URL`, `BASE_PATH` and `PUBLIC_FULL_SITE` from the repository.
-Locally, `npm run dev` always shows the full site (`.env.development`).
-
-Publish the dev preview (the repo needs Settings → Pages → Source: GitHub Actions):
+Every push to `main` of `netsci2027/netsci2027.github.io` builds and publishes https://netsci2027.github.io
+(see `.github/workflows/deploy.yml`). Locally, `npm run dev` shows the full site (`.env.development`).
 
 ```bash
-git remote add dev https://github.com/loplopez/conf-dev.git   # once
-git push dev main                                              # every time you want to update it
+git push origin main
 ```
-
-Internal links and `/public` assets must use `u('/path')` from `src/lib/url.ts` so they work under a sub-path such as `/conf-dev`.
 
 The public site has shown the full site since 9 Oct 2026 (`PUBLIC_FULL_SITE: '1'` in the workflow); set it back to `'0'` for a landing-page-only site.

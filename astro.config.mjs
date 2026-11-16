@@ -3,8 +3,8 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 
-// SITE_URL and BASE_PATH are set by .github/workflows/deploy.yml from the repository:
-// "/" on https://netsci2027.github.io, "/<repo>" for a dev preview (e.g. /conf-dev).
+// SITE_URL and BASE_PATH can be overridden by the environment; the site is served at
+// https://netsci2027.github.io/.
 const base = process.env.BASE_PATH || '/';
 const site = process.env.SITE_URL || 'https://netsci2027.github.io';
 
